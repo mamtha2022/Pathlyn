@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VisionBoard - Personal Goal Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-container">
+   <div class="header-container">
+  <div class="animated-target">
+    <div class="target-rings">
+      <div class="ring ring1"></div>
+      <div class="ring ring2"></div>
+      <div class="ring ring3"></div>
+    </div>
+    <div class="dart-fly"></div>
+    <div class="spark"></div>
+  </div>
+
+  <div class="title-block">
+    <h1>VisionBoard</h1>
+    <p class="tagline">Track your dreams, one step at a time ✨</p>
+  </div>
+</div>
+
+    <div class="main-content">
+      <!-- LEFT: Goal form + goals -->
+      <div class="left-section">
+        <form id="goalForm">
+          <input type="text" id="goalInput" placeholder="Enter your goal..." required />
+          <button type="submit">Add Goal</button>
+        </form>
+        <div id="goalsContainer" class="goals-grid">
+          <!-- Goal cards go here -->
+        </div>
+      </div>
+
+      <!-- RIGHT: Check-in + dashboard -->
+      <div class="right-section">
+        <button id="dailyCheckinBtn" class="checkin-btn">✅ Already Checked In Today</button>
+        <div id="dashboard" class="dashboard-summary">
+          <p>Total Goals: <span id="totalGoals">0</span></p>
+          <p>Completed: <span id="completedGoals">0</span></p>
+          <p>Avg Progress: <span id="avgProgress">0%</span></p>
+          <p>With Deadlines: <span id="deadlineGoals">0</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
