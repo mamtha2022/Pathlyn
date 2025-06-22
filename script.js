@@ -182,14 +182,22 @@ const checkinBtn = document.getElementById("dailyCheckinBtn");
 const today = new Date().toISOString().slice(0, 10);
 const lastCheck = localStorage.getItem("lastCheckinDate");
 
+// Set initial button state
 if (lastCheck === today) {
   checkinBtn.disabled = true;
   checkinBtn.textContent = "✅ Already Checked In Today";
   checkinBtn.style.background = "#888";
+} else {
+  checkinBtn.textContent = "✅ Daily Check-In";
+  checkinBtn.disabled = false;
+  checkinBtn.style.background = "#4caf50";
 }
 
 checkinBtn.addEventListener("click", () => {
-  if (localStorage.getItem("lastCheckinDate") === today) {
+  const today = new Date().toISOString().slice(0, 10);
+  const lastCheck = localStorage.getItem("lastCheckinDate");
+
+  if (lastCheck === today) {
     alert("Already checked in today. Come back tomorrow!");
     return;
   }
